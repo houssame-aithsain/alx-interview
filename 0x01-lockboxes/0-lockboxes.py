@@ -3,6 +3,7 @@
 Module to determine if all boxes can be opened
 """
 
+
 def canUnlockAll(boxes):
     """
     Function to determine if all boxes can be opened
@@ -17,5 +18,5 @@ def canUnlockAll(boxes):
             if key < len(boxes) and not opened[key]:
                 opened[key] = True
                 keys.append(key)
-    
+
     return all(opened)
