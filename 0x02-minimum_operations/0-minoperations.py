@@ -2,8 +2,8 @@
 """
 Minimum Operations
 
-This script calculates the minimum number of operations required to 
-achieve exactly n characters 'H' in a text file by using "Copy All" 
+This script calculates the minimum number of operations required to
+achieve exactly n characters 'H' in a text file by using "Copy All"
 and "Paste" operations.
 """
 
@@ -16,7 +16,7 @@ def minOperations(n):
     n (int): The desired number of 'H' characters.
 
     Returns:
-    int: Minimum number of operations to achieve n 'H' characters or 
+    int: Minimum number of operations to achieve n 'H' characters or
          0 if impossible.
     """
     if n <= 1:
