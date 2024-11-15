@@ -2,7 +2,7 @@
 // prints all characters of a Star Wars movie
 
 const request = require('request');
-const url = `https://swapi-api.alx-tools.com/api/films/${process.argv[2]}`;
+const url = `https://swapi-api.alx-tools.com/api/${process.argv[2]}`;
 
 function charRequest (characters, num) {
   if (num >= characters.length) return;
