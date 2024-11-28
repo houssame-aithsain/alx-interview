@@ -1,21 +1,27 @@
 #!/usr/bin/python3
 
+""" Contains makeChange function """
+
+
 def makeChange(coins, total):
-    # If total is 0 or less, return 0 as no coins are needed
+    """
+    Returns: fewest number of coins needed to meet total
+        If total is 0 or less, return 0
+        If total cannot be met by any number of coins you have, return -1
+    """
+    if not coins:
+        return -1
     if total <= 0:
         return 0
 
-    # Initialize dp array with a large value (total + 1, which is impossible)
-    dp = [float('inf')] * (total + 1)
+    change = 0
+    coins = sorted(coins, reverse=True)
 
-    # Base case: 0 coins are needed to make total 0
-    dp[0] = 0
-
-    # Iterate through each coin
     for coin in coins:
-        for i in range(coin, total + 1):
-            if dp[i - coin] != float('inf'):
-                dp[i] = min(dp[i], dp[i - coin] + 1)
+        while coin <= total:
+            total -= coin
+            change += 1
+        if total == 0:
+            return change
 
-    # If dp[total] is still infinity, it means the total can't be made
-    return dp[total] if dp[total] != float('inf') else -1
+    return -1
