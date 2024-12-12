@@ -29,7 +29,7 @@ def isWinner(x, nums):
     # Mark multiples of primes as 0
     for i in range(2, len(a)):
         if a[i] == 1:  # i is prime
-            rm_multiples(a, i)
+            remove_player(a, i)
 
     # Count the number of wins for each player based on the rounds
     for n in nums:
@@ -47,7 +47,7 @@ def isWinner(x, nums):
     return None
 
 
-def rm_multiples(ls, x):
+def remove_player(ls, x):
     """Removes multiples of a prime number from the list.
 
     Args:
