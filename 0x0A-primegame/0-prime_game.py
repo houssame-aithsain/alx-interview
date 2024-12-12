@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""initializing the module"""
 
 
 def isWinner(x, nums):
