@@ -1,6 +1,10 @@
 #!/usr/bin/python3
 
+
 def isWinner(x, nums):
+    """
+    this function returns the name of the player that won the most rounds
+    """
     def sieve_of_eratosthenes(limit):
         primes = [True] * (limit + 1)
         primes[0], primes[1] = False, False
