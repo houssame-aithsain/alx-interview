@@ -2,6 +2,18 @@
 """0. Prime Game - Maria and Ben are playing a game"""
 
 
+def remove_player(ls, x):
+    """Removes multiples of a prime number from the list.
+
+    Args:
+        ls (list): List of integers where prime multiples.
+        x (int): The prime number whose multiples will be removed.
+    """
+    for i in range(2, len(ls)):
+        if i * x < len(ls):
+            ls[i * x] = 0
+
+
 def isWinner(x, nums):
     """Determine the winner of multiple rounds of the prime game.
 
@@ -45,15 +57,3 @@ def isWinner(x, nums):
     if maria > ben:
         return "Maria"
     return None
-
-
-def remove_player(ls, x):
-    """Removes multiples of a prime number from the list.
-
-    Args:
-        ls (list): List of integers where prime multiples.
-        x (int): The prime number whose multiples will be removed.
-    """
-    for i in range(2, len(ls)):
-        if i * x < len(ls):
-            ls[i * x] = 0
